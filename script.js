@@ -9,6 +9,7 @@ export function exercise01(args) {
   }
   return result.join("")
 }
+
 export function exercise02(args) {
   const input = args
   const result = []
@@ -21,4 +22,16 @@ export function exercise02(args) {
   return result.join("")
 }
 
-export function exercise03(args) {}
+export function exercise03(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e" || currentElement === "E") {
+      result.push(currentElement)
+    }
+  }
+  const amount = result.length
+  return amount
+}
