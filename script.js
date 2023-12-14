@@ -54,31 +54,30 @@ export function exercise04(args) {
 export function exercise05(args) {
   const input = args
   const result = []
-  for (let i = 1; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (
       currentElement.charCodeAt() >= 65 &&
       currentElement.charCodeAt() <= 90
     ) {
-      result.push(currentElement)
+      return true
     }
   }
-  if (result != []) {
-    const capital = true
-  }
-  if (capital == true) {
-    return "yes"
-  } else {
-    return "no"
-  }
+  return false
 }
 
-// if (
-//   (currentElement.charCodeAt() >= 41 &&
-//     currentElement.charCodeAt() <= 57) ||
-//   (currentElement.charCodeAt() >= 72 &&
-//     currentElement.charCodeAt() <= 100) ||
-//   (currentElement.charCodeAt() >= 133 &&
-//     currentElement.charCodeAt() <= 140) ||
-//   (currentElement.charCodeAt() >= 173 && currentElement.charCodeAt() <= 177)
-// ) {
+export function exercise06(args) {
+  const input = args.toUpperCase()
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (
+      (currentElement.charCodeAt() < 65 || currentElement.charCodeAt() > 90) &&
+      currentElement.charCodeAt() != 32
+    ) {
+      console.log(currentElement)
+      return true
+    }
+  }
+  return false
+}
